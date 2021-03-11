@@ -108,8 +108,8 @@ app.get("/api/developers", (req, res) => {
   let allDevelopers = [];
   developerLinksArray.forEach((element) => {
     temp = {
-      "github_id": element.github_id,
-      "avatar_url": element.avatar_url,
+      github_id: element.github_id,
+      avatar_url: element.avatar_url,
     };
     allDevelopers.push(temp);
   });
