@@ -1,10 +1,23 @@
 const fetch = require("node-fetch");
+const cors = require("cors");
 const express = require("express");
 const { response } = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 7000;
 
 app.use(express.json());
+app.use(cors());
+
+//developer websites URL
+const githubURL = "https://www.github.com/";
+const linekdinURL = "https://www.linkedin.com/";
+const codechefURL = "https://www.codechef.com/";
+const hackerrankURL = "https://www.hackerrank.com/";
+const twitterURL = "https://www.twitter.com/";
+const mediumURL = "https://www.medium.com/";
+
+//Github Public APIs URL :
+const githubAPIURL = "https://api.github.com/";
 
 //Variables used in promises
 let jsonResponse;
@@ -12,9 +25,17 @@ let repos = [];
 let temp;
 
 //Developer Links Array
-let developerLinksArray = [];
-
-const githubUrl = "https://api.github.com/";
+let developerLinksArray = [
+  {
+    github_id: "iamindrapreetsingh",
+    avatar_url: "https://avatars.githubusercontent.com/u/51911982?v=4",
+    linkedin_id: `${linekdinURL}iamindrapreetsingh`,
+    codechef_id: `${codechefURL}iamindrapreetsingh`,
+    hackerrank_id: `${hackerrankURL}iamindrapreetsingh`,
+    twitter_id: `${twitterURL}iamindrapreetsingh`,
+    medium_id: `${mediumURL}iamindrapreetsingh`,
+  },
+];
 
 //Get a developer details
 app.get("/api/developers/:id", (req, res) => {
@@ -24,7 +45,7 @@ app.get("/api/developers/:id", (req, res) => {
   if (!developerLinks) {
     res.status(404).send("User does not exist");
   } else {
-    fetch(`${githubUrl}users/${req.params.id}`)
+    fetch(`${githubAPIURL}users/${req.params.id}`)
       .then((response) => response.json())
       .then((json) => {
         let object = {
@@ -46,7 +67,7 @@ app.get("/api/developers/:id", (req, res) => {
         jsonResponse = object;
         return jsonResponse;
       })
-      .then((x) => fetch(`https://api.github.com/users/${req.params.id}/repos`))
+      .then((x) => fetch(`${githubAPIURL}users/${req.params.id}/repos`))
       .then((response) => response.json())
       .then((json) => {
         json.forEach((element) => {
@@ -66,16 +87,30 @@ app.get("/api/developers/:id", (req, res) => {
 
 //Add a developer
 app.post("/api/developers", (req, res) => {
+  if (!req.body.github_id) {
+    res.send("Github Id is empty!!");
+    return;
+  }
+
   const developerLinks = {
-    github_id: req.body.github_id,
-    linkedin_id: req.body.linkedin_id,
-    codechef_id: req.body.codechef_id,
-    hackerrank_id: req.body.hackerrank_id,
-    twitter_id: req.body.twitter_id,
-    medium_id: req.body.medium_id,
+    github_id: `${req.body.github_id}`,
+    linkedin_id: `${linekdinURL}${req.body.linkedin_id}`,
+    codechef_id: `${codechefURL}${req.body.codechef_id}`,
+    hackerrank_id: `${hackerrankURL}${req.body.hackerrank_id}`,
+    twitter_id: `${twitterURL}${req.body.twitter_id}`,
+    medium_id: `${mediumURL}${req.body.medium_id}`,
   };
 
-  fetch(`${githubUrl}users/${req.body.github_id}`)
+  if (
+    developerLinksArray.find((d1) => d1.github_id == developerLinks.github_id)
+  ) {
+    res.status(409).send("User with the same GithubId present!!");
+    return;
+  }
+
+  const url = `${githubAPIURL}users/${req.body.github_id}`;
+
+  fetch(url)
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -118,7 +153,7 @@ app.get("/api/developers", (req, res) => {
 
 //This is for test
 app.get("/", (req, res) => {
-  res.send("Raman");
+  res.send("API is running!!!");
 });
 
 app.listen(port, () => {
