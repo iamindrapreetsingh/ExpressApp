@@ -1,0 +1,658 @@
+body {
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #2f2e41;
+}
+
+.header-content {
+  height: 607px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1180px;
+}
+
+#header-text {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+
+  font-size: 72px;
+  color: #ffffff;
+}
+
+#below-header-text {
+  height: 76px;
+  margin-top: 50px;
+  justify-content: center;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 76px;
+  color: #3f3d56;
+}
+
+.non-header-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider {
+  height: 2px;
+  width: 97%;
+  margin-top: 50px;
+  background: #d0cde1;
+}
+
+#search-box-div {
+  margin-top: 50px;
+  width: 821px;
+  height: 82px;
+  background: #d0cde1;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#search-input-box {
+  width: 709px;
+  height: 62px;
+  left: 328px;
+  top: 845px;
+  background: #ffffff;
+  border-radius: 15px;
+  border: none;
+  margin: 12px;
+  font-size: 24px;
+  color: #3f3d56;
+  padding-left: 28px;
+}
+
+#search-input-box:focus,
+#add-developer-btn,
+#link-input-box {
+  outline: none;
+}
+
+#search-icon {
+  height: 41.54px;
+  width: 41.54px;
+  margin-right: 33.34px;
+}
+
+.github-id-nd-avatar-section {
+  width: 73%;
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 60% 40%;
+  grid-auto-rows: 190px;
+}
+
+.github-id-nd-avatar {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+#avatar {
+  height: 91.67px;
+  width: 91.67px;
+  border-radius: 50%;
+}
+
+#github-id {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  color: #9f8e63;
+  margin-left: 57.17px;
+}
+
+#github-id-error {
+  color: red;
+  margin-left: 80px;
+  font-size: 24px;
+  display: none;
+}
+
+#north-east-icon {
+  font-size: 20px;
+  margin-left: 20px;
+  color: #0768fa;
+}
+
+#add-developer-btn {
+  width: 456px;
+  height: 82px;
+  background: #7c639f;
+  border-radius: 15px;
+  border: none;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+#could-not-find-text {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  margin-top: 50px;
+  color: #3f3d56;
+}
+
+.footer {
+  width: 100%;
+  height: 96px;
+  margin-top: 63px;
+  background: #3f3d56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-text {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+
+  color: #ffffff;
+}
+
+#heart {
+  color: red;
+}
+
+.modal {
+  position: absolute;
+  width: 1040px;
+  /* width: 77%; */
+  height: 1200px;
+  top: 133px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+  background: #e5e5e5;
+}
+
+#modal-heading {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+
+  color: #000000;
+
+  margin-left: 50px;
+  margin-top: 42px;
+}
+
+.website-logo-nd-link {
+  display: flex;
+  align-items: center;
+  margin-top: 56px;
+  margin-left: 80px;
+}
+
+#website-logo {
+  height: 30px;
+  width: 30px;
+}
+
+#website-link {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #000000;
+}
+
+.link-input-box {
+  width: 596px;
+  height: 50px;
+  margin-top: 21px;
+
+  margin-left: 8%;
+
+  background: #ffffff;
+  border: 1px solid #d0cde1;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.cancel-nd-submit {
+  margin-left: 645px;
+  margin-top: 51px;
+}
+
+#cancel-label {
+  width: 74px;
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #3f3d56;
+}
+
+#submit-btn {
+  width: 175px;
+  height: 60px;
+
+  background: #7c639f;
+  border-radius: 15px;
+  border: none;
+
+  margin-left: 83px;
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+
+  color: #ffffff;
+}
+
+.details-page {
+  flex-direction: column;
+  display: none;
+}
+
+.details-page-header {
+  background-color: #2f2e41;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#details-page-header-left-text {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #ffffff;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+#details-page-header-right-text {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #ffffff;
+  padding-right: 24px;
+  cursor: pointer;
+}
+
+.avatar-and-summary {
+  width: 100%;
+  height: 510px;
+  background: #e5e5e5;
+  display: flex;
+  align-items: center;
+}
+
+#details-page-avatar {
+  margin-left: 8.33%;
+  background: #7c639f;
+  border-radius: 50%;
+  height: 333.33px;
+  width: 333.33px;
+}
+
+#developer-summary {
+  margin-left: 46.34px;
+}
+
+#developer-name {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  color: #3f3d56;
+}
+
+#developer-bio {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 30px;
+  font-size: 24px;
+  line-height: 33px;
+  color: #3f3d56;
+}
+
+#developer-web-links {
+  margin-top: 30px;
+  margin-left: -14px;
+}
+
+.website-links {
+  height: 30px;
+  width: 30px;
+  margin-left: 14px;
+}
+
+.developer-other-details {
+  display: flex;
+  margin-top: 30px;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #3f3d56;
+  margin-left: -17.84px;
+}
+
+.other-details-logo {
+  margin-left: 17.67px;
+  margin-top: 4px;
+  height: 11.67px;
+  width: 16.67px;
+}
+
+.other-details-text {
+  margin-left: 11.67px;
+}
+
+#github-repo-heading {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 76px;
+  margin-top: 50px;
+  text-align: center;
+  color: #3f3d56;
+}
+
+.repo-name-and-desc {
+  margin-left: 30px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#repo-name {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  color: #0768fa;
+}
+
+#repo-created-at {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 20px;
+  color: #3f3d56;
+  opacity: 0.4;
+}
+
+#repo-north-arrow {
+  font-size: 15px;
+  margin-left: 10px;
+  color: #0768fa;
+}
+
+#repo-desc {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  margin-left: 30px;
+  margin-top: 15px;
+  color: #3f3d56;
+}
+
+#repo-link {
+  text-decoration: none;
+  color: 3f3d56;
+}
+
+#blog {
+  text-decoration: none;
+  color: #3f3d56;
+}
+
+@media screen and (max-width: 1025px) {
+  .avatar-and-summary {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #github-id {
+    margin-left: 12px;
+  }
+
+  .divider {
+    margin-top: 25px;
+  }
+
+  #details-page-header-left-text,
+  #details-page-header-right-text {
+    font-size: 16px;
+  }
+
+  #details-page-avatar {
+    margin-left: 8.33%;
+    background: #7c639f;
+    height: 100px;
+    width: 100px;
+  }
+
+  #developer-name {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #3f3d56;
+    margin-top: 9px;
+  }
+
+  #developer-bio {
+    font-size: 12px;
+  }
+
+  .website-links {
+    margin-left: 30px;
+    margin-top: 22px;
+    height: 17.96px;
+    width: 17.96px;
+  }
+
+  .github-id-nd-avatar-section {
+    grid-auto-rows: 50px;
+    margin-top: 20px;
+  }
+
+  #north-east-icon {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .developer-other-details {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .other-details-logo {
+    margin-left: 17.67px;
+    height: 10px;
+    width: 10px;
+    margin-left: 23.67px;
+  }
+
+  #user-location {
+    margin-left: -23.67px;
+  }
+
+  .other-details-text {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-left: 9.08px;
+  }
+
+  #github-repo-heading,
+  #repo-name {
+    font-size: 27px;
+  }
+
+  #repo-desc {
+    font-size: 18px;
+  }
+
+  #repo-created-at {
+    font-size: 16px;
+  }
+
+  #header-img {
+    height: 350;
+    width: 350px;
+  }
+
+  .header-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  #header-text {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #below-header-text {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  #search-box-div {
+    width: 278px;
+    height: 27.77px;
+    border-radius: 15px;
+    margin-top: 12px;
+  }
+
+  #search-input-box {
+    width: 240.08px;
+    height: 15px;
+    border-radius: 15px;
+    font-size: 12px;
+  }
+
+  #search-icon {
+    height: 14.07px;
+    width: 14.07px;
+  }
+
+  #avatar {
+    height: 20.83px;
+    width: 20.83px;
+  }
+
+  #github-id {
+    font-size: 12px;
+  }
+
+  #add-developer-btn {
+    height: 30px;
+    width: 180px;
+    font-size: 12px;
+    margin-top: 0px;
+  }
+
+  #could-not-find-text {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  #footer-text {
+    font-size: 10px;
+  }
+
+  #repo-name {
+    font-size: 14px;
+  }
+
+  #repo-desc {
+    font-size: 14px;
+  }
+
+  #repo-created-at {
+    font-size: 14px;
+  }
+
+  .link-input-box {
+    width: 250px;
+    height: 40px;
+    margin-left: 20px;
+  }
+
+  #modal-heading {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+
+  #website-logo {
+    margin-left: -55px;
+    height: 12px;
+    width: 12px;
+  }
+
+  #website-link {
+    font-size: 15px;
+    margin-left: 8px;
+  }
+
+  .cancel-nd-submit {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  #submit-btn {
+    height: 30px;
+    width: 80px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  #cancel-label {
+    font-size: 15px;
+    margin-left: 42px;
+  }
+
+  .modal {
+    height: 970px;
+    width: 350px;
+  }
+
+  .footer {
+    margin-top: 30px;
+  }
+}
