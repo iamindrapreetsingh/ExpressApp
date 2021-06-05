@@ -1,7 +1,6 @@
 const fetch = require("node-fetch");
 const cors = require("cors");
 const express = require("express");
-const { response } = require("express");
 const app = express();
 const port = process.env.PORT || 7000;
 
@@ -29,7 +28,7 @@ let developerLinksArray = [
   {
     github_id: "iamindrapreetsingh",
     avatar_url: "https://avatars.githubusercontent.com/u/51911982?v=4",
-    linkedin_id: `${linekdinURL}iamindrapreetsingh`,
+    linkedin_id: `${linekdinURL}indrapreet`,
     codechef_id: `${codechefURL}iamindrapreetsingh`,
     hackerrank_id: `${hackerrankURL}iamindrapreetsingh`,
     twitter_id: `${twitterURL}iamindrapreetsingh`,
@@ -39,6 +38,7 @@ let developerLinksArray = [
 
 //Get a developer details
 app.get("/api/developers/:id", (req, res) => {
+  repos = [];
   const developerLinks = developerLinksArray.find(
     (dl) => dl.github_id == req.params.id
   );
@@ -53,8 +53,8 @@ app.get("/api/developers/:id", (req, res) => {
           avatar_url: json.avatar_url,
           name: json.name,
           company: json.company,
-          blog: json.company,
-          location: json.company,
+          blog: json.blog,
+          location: json.location,
           email: json.email,
           bio: json.bio,
           github_id: developerLinks.github_id,
