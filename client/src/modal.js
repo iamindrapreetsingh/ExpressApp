@@ -62,6 +62,7 @@ class GetModal extends Component {
 
   submitHandler = (e) => {
     e.preventDefault();
+    document.querySelector("#modal-form").reset();
     document.querySelector("#github-id-error").style.display = "none";
     const requestPayload = {
       codechef_id: this.state.codechef,
@@ -106,7 +107,7 @@ class GetModal extends Component {
     const { inputBoxValue } = this.state;
     return (
       <div className="modal">
-        <form onSubmit={this.submitHandler}>
+        <form id="modal-form" onSubmit={this.submitHandler}>
           <div className="modal-content">
             <div id="modal-heading">Add a Developer's Profile</div>
 
