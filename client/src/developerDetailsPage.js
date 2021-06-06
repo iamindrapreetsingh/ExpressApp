@@ -124,9 +124,15 @@ class GetDeveloperDetailsPage extends Component {
                   src="company-website.svg"
                 />
               )}
-              <a id="blog" href={blog}>
-                <div className="other-details-text">{blog}</div>
-              </a>
+              {blog.includes("http") ? (
+                <a id="blog" href={blog}>
+                  <div className="other-details-text">{blog}</div>
+                </a>
+              ) : (
+                <a id="blog" href={"https://" + blog}>
+                  <div className="other-details-text">{blog}</div>
+                </a>
+              )}
             </div>
           </div>
         </div>
