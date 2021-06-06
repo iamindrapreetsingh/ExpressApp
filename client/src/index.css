@@ -459,10 +459,14 @@ body {
   }
 
   #details-page-avatar {
-    margin-left: 8.33%;
+    margin-left: 0px;
     background: #7c639f;
     height: 100px;
     width: 100px;
+  }
+
+  #developer-summary {
+    margin-left: 0px;
   }
 
   #developer-name {

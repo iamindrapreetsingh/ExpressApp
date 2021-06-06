@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //developer websites URL
-const linekdinURL = "https://www.linkedin.in/";
+const linekdinURL = "https://www.linkedin.com/in/";
 const codechefURL = "https://www.codechef.com/users/";
 const hackerrankURL = "https://www.hackerrank.com/";
 const twitterURL = "https://www.twitter.com/";

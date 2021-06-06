@@ -34,6 +34,7 @@ class GetDeveloperDetailsPage extends Component {
       blog,
       github_id,
       linkedin_id,
+      medium_id,
       codechef_id,
       hackerrank_id,
       twitter_id,
@@ -64,16 +65,39 @@ class GetDeveloperDetailsPage extends Component {
                 />
               </a>
               <a href={hackerrank_id}>
-                <img className="website-links" src="hackerrank.png" alt="" />
+                <img
+                  className="website-links"
+                  src="hackerrank.png"
+                  alt="hackerrank.png"
+                />
               </a>
               <a href={codechef_id}>
-                <img className="website-links" src="codechef.png" alt="" />
+                <img
+                  className="website-links"
+                  src="codechef.png"
+                  alt="codechef.png"
+                />
               </a>
               <a href={linkedin_id}>
-                <img className="website-links" src="linkedin.png" alt="" />
+                <img
+                  className="website-links"
+                  src="linkedin.png"
+                  alt="linkedin.png"
+                />
+              </a>
+              <a href={medium_id}>
+                <img
+                  className="website-links"
+                  src="medium.png"
+                  alt="medium.png"
+                />
               </a>
               <a href={twitter_id}>
-                <img className="website-links" src="twitter.png" alt="" />
+                <img
+                  className="website-links"
+                  src="twitter.png"
+                  alt="twitter.png"
+                />
               </a>
             </div>
             <div className="developer-other-details">
@@ -109,7 +133,10 @@ class GetDeveloperDetailsPage extends Component {
         <div className="developer-repo-detail">
           <div id="github-repo-heading">Github Repositories</div>
           <GetDivider width="1340px"></GetDivider>
-          {repos && repos.map((repo) => <GetGithubRepoInfo key={repo.html_url} repo={repo} />)}
+          {repos &&
+            repos.map((repo) => (
+              <GetGithubRepoInfo key={repo.html_url} repo={repo} />
+            ))}
         </div>
       </div>
     );
