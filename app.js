@@ -12,12 +12,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //developer websites URL
-const githubURL = "https://www.github.com/";
-const linekdinURL = "https://www.linkedin.com/";
-const codechefURL = "https://www.codechef.com/";
+const linekdinURL = "https://www.linkedin.in/";
+const codechefURL = "https://www.codechef.com/users/";
 const hackerrankURL = "https://www.hackerrank.com/";
 const twitterURL = "https://www.twitter.com/";
-const mediumURL = "https://www.medium.com/";
+const mediumURL = "https://www.medium.com/@";
 
 //Github Public APIs URL :
 const githubAPIURL = "https://api.github.com/";
