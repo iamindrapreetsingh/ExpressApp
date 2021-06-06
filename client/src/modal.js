@@ -12,7 +12,7 @@ const logoAndLinkLabel = [
   },
 
   {
-    logo: "Codechef.png",
+    logo: "codechef.png",
     linkLabel: "Codechef",
     name: "codechef",
   },
