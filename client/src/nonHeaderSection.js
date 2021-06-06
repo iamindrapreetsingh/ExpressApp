@@ -23,7 +23,7 @@ class GetNonHeaderSection extends Component {
     console.log("GithubId is - " + githubId);
     try {
       const response = await fetch(
-        `http://localhost:7000/api/developers/${githubId}`
+        `/api/developers/${githubId}`
       );
       const data = await response.json();
       this.setState({ developerDetails: data });
@@ -47,7 +47,7 @@ class GetNonHeaderSection extends Component {
   };
 
   fetchUsers = async () => {
-    const response = await fetch("http://localhost:7000/api/developers");
+    const response = await fetch("/api/developers");
     const data = await response.json();
     this.setState({ developersList: data });
   };
